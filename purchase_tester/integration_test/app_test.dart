@@ -7,7 +7,6 @@ import 'package:purchases_flutter/purchases_flutter.dart';
 void main() {
   IntegrationTestWidgetsFlutterBinding.ensureInitialized();
 
-  // ignore: deprecated_member_use
   setUpAll(() => Purchases.setup('api_key', appUserId: 'test-user'));
 
   testWidgets('Configures without crashing', (WidgetTester tester) async {

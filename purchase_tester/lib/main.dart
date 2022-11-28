@@ -14,10 +14,10 @@ void main() {
     );
   } else if (Platform.isAndroid) {
     // Run the app passing --dart-define=AMAZON=true
-    // const useAmazon = bool.fromEnvironment("amazon");
+    const useAmazon = bool.fromEnvironment("amazon");
     StoreConfig(
-      store: Store.googlePlay,
-      apiKey: googleApiKey,
+      store: useAmazon ? Store.amazonAppstore : Store.googlePlay,
+      apiKey: useAmazon ? amazonApiKey : googleApiKey,
     );
   }
 
